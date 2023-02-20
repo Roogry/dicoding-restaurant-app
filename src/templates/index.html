@@ -1,17 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   
-  <title>Restaurant Apps Starter Project</title>
+  <title>Cafe Market Project</title>
 </head>
 <body>
-  <h1>Restaurant Apps Starter Project</h1>
-  <p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-  <p>Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros sebagai background hero elemen</p>
-  <img src="./images/heros/hero-image_1.jpg" width="450" alt="">
-  <img src="./images/heros/hero-image_2.jpg" width="450" alt="">
-  <img src="./images/heros/hero-image_3.jpg" width="450" alt="">
-  <img src="./images/heros/hero-image_4.jpg" width="450" alt="">
+  <a href="#cafe" class="skip-link">Rekomendasi Cafe</a>
+  <app-bar></app-bar>
+
+  <main>
+    <section class="hero">
+      <div class="hero__inner">
+        <h1 class="hero__title">Beri Keluarga Anda <br>Rasa Enak & <span class="hero__highlight">Nyaman</span></h1>
+        <p class="hero__tagline">
+          Memberikan berbagai tempat <br>makan yang enak dan nyaman.
+        </p>
+      </div>
+    </section>
+    <section id="strength__section">
+      <div class="section__label">
+        <p class="section__highlight">Kriteria kami memilih</p>
+        <h2 class="section__title">Kepastian Rekomendasi</h2>
+        <p class="section__description">Nikmati Pengalaman Bersantap yang Tak Terlupakan dengan Garansi Kualitas Terbaik dari Kami</p>
+      </div>
+      <div class="strength">
+        <article id="strength-clean" class="strength-item">
+            <img class="strength-item__thumbnail"
+                src="" alt="">
+            <div class="strength-item__content">
+                <h3 class="strength-item__title">
+                  Bersih dan Nyaman
+                </h3>
+                <p class="strength-item__description">
+                  Dijamin betah berlama-lama di cafe
+                </p>
+            </div>
+        </article>
+        <article id="strength-charge" class="strength-item">
+            <img class="strength-item__thumbnail"
+                src="" alt="">
+            <div class="strength-item__content">
+                <h3 class="strength-item__title">
+                  Tersedia Stop Kontak
+                </h3>
+                <p class="strength-item__description">
+                  Bisa sambil kerja maupun buat tugas
+                </p>
+            </div>
+        </article>
+        <article id="strength-cheap" class="strength-item">
+            <img class="strength-item__thumbnail"
+                src="" alt="">
+            <div class="strength-item__content">
+                <h3 class="strength-item__title">
+                  Budget Anak Kos
+                </h3>
+                <p class="strength-item__description">
+                  Rasa kualitas bintang lima harga kaki lima
+                </p>
+            </div>
+        </article>
+      </div>
+    </section>
+    <section id="cafe__section">
+      <div class="section__label">
+        <p class="section__highlight">Berbagai cafe</p>
+        <h2 class="section__title">Rekomendasi Cafe</h2>
+        <p class="section__description">Temukan hidangan lezat berbalut kenyamanan dengan melihat pilihan cafe menarik dari berbagai sudut jalan</p>
+      </div>
+      <div class="cafe"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer__inner">
+      <p>Copyright © 2022 - Cafe Market</p>
+    </div>
+  </footer>
 </body>
 </html>
