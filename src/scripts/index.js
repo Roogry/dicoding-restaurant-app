@@ -26,7 +26,7 @@ const truncate = (text, num) => {
 let cafeHtml = "";
 data.restaurants.forEach((cafe) => {
   cafeHtml += `
-    <article class="cafe-item">
+    <article class="cafe-item" tabindex="0">
         <div class="cafe-item__header">
             <img class="cafe-item__thumbnail"
                 src="${cafe["pictureId"]}"
