@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
   // {
-  //   app: 
+  //   app:
   //   sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   // },
   output: {
@@ -35,7 +35,7 @@ module.exports = {
         use: [
           'file-loader',
         ],
-      }
+      },
     ],
   },
   plugins: [
