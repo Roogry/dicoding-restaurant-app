@@ -83,7 +83,7 @@ a {
   border-radius: 10px;
 }
 
-.nav-mobile {
+#hamburgerButton {
   display: none;
 }
 
@@ -127,6 +127,23 @@ main {
   width: 100%;
 }
 
+.hero__image__container{
+  display: flex;
+}
+
+.hero__inner_image{
+  max-width: 300px;
+  margin-right: 24px;
+  border-radius: 20px;
+}
+
+.hero__info {
+  font-size: 18px;
+  color: #876b12;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
 .hero__title {
   color: #1D1C1C;
   font-weight: 700;
@@ -137,7 +154,7 @@ main {
 }
 
 .hero__highlight{
-  color: #FFCC45;
+  color: #a5842b;
 }
 
 .hero__tagline {
@@ -147,6 +164,16 @@ main {
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 1.1px;
+}
+
+.hero__inner__right{
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+
+.hero__inner__right .hero__tagline{
+  margin-top: 8px;
 }
 
 /*
@@ -241,7 +268,7 @@ main {
   margin-top: 5%;
 }
 
-.cafe {
+.cafes {
   justify-items: center;
   margin: 50px 60px;
   display: grid;
@@ -312,6 +339,130 @@ main {
   font-size: 14px;
   line-height: 1.5em;
   color: #635E58;
+}
+
+/*
+ * Cafe Detail
+ *
+ */
+.cafe__content {
+  margin: 50px 60px;
+}
+
+.cafe__content .cafe__description p{
+  margin-top: 16px;
+  line-height: 1.6;
+  color: #635E58;
+  font-size: 14px;
+}
+
+#menu_section {
+  margin-top: 16px;
+}
+
+#menus {
+  margin: 30px 60px 70px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#menus table {
+  margin: 0;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #F0A04B;
+  font-size: 20px;
+  background: #fff;
+}
+
+#menus table th,
+#menus table tr:nth-child(2n + 2) {
+  background: #fff9e7;
+}
+
+#menus table th,
+#menus table td {
+  padding: 20px 50px;
+}
+
+#menus table th {
+  border-bottom: 1px solid #F0A04B;
+}
+
+/*
+ * Review
+ *
+ */
+
+ #review__section {
+  margin-top: 5%;
+}
+
+.reviews {
+  justify-items: center;
+  margin: 50px 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 30px;
+}
+
+.review-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 #00000015;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.review-item__content {
+  padding: 16px 24px 32px 24px;
+}
+
+.review-item__date {
+  font-size: 12px;
+  color: #ffc400;
+}
+
+.review-item__name {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 6px;
+  transition: 0.3s;
+}
+
+.review-item__review {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #635E58;
+}
+
+/*
+   Like
+*/
+
+.like {
+  font-size: 18px;
+  font-weight: 600;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #F0A04B;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  padding: 10px;
+  z-index: 100;
+}
+
+.like i{
+  margin-right: 8px;
+  color: white;
 }
 
 /*
