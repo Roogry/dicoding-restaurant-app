@@ -1,5 +1,4 @@
 import 'regenerator-runtime';
-import { precacheAndRoute } from 'workbox-precaching';
 import CacheHelper from './utils/cache-helper';
 
 // Caching the listed asset below
@@ -19,8 +18,6 @@ const assetsToCache = [
   './app.webmanifest',
   './sw.bundle.js',
 ];
-
-precacheAndRoute(self.__WB_MANIFEST);
 
 self.addEventListener('install', (event) => {
   event.waitUntil(CacheHelper.cachingAppShell([...assetsToCache]));
