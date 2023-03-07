@@ -22,10 +22,17 @@ class App {
   }
 
   async renderPage() {
+    const mainContent = document.querySelector('#mainContent');
+    const skipLinkElement = document.querySelector('.skip-link');
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+
+    skipLinkElement.addEventListener('click', (event) => {
+      event.preventDefault();
+      mainContent.focus();
+    });
   }
 }
 
