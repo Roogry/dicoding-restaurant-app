@@ -456,7 +456,7 @@ main {
   align-items: center;
   justify-content: center;
   transition: 0.3s;
-  padding: 10px;
+  padding: 12px 16px;
   z-index: 100;
 }
 
