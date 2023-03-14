@@ -12,13 +12,16 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const cafe = await RestaurantApiSource.detailCafe(url.id);
+    const hero = document.querySelector('.hero');
     const mainContent = document.querySelector('#mainContent');
+    const makananContainer = document.querySelector('#makananContainer');
+    const minumanContainer = document.querySelector('#minumanContainer');
 
     mainContent.innerHTML = createCafeDetailTemplate(cafe);
-    $('.hero').css('background-image', `linear-gradient(0deg, rgba(255, 249, 234, 0.7), rgba(255, 249, 234, 1)), url(${`${CONFIG.BASE_IMAGE_URL}large/${cafe.pictureId}`})`);
+    hero.css('background-image', `linear-gradient(0deg, rgba(255, 249, 234, 0.7), rgba(255, 249, 234, 1)), url(${`${CONFIG.BASE_IMAGE_URL}large/${cafe.pictureId}`})`);
 
     cafe.menus.foods.forEach((food) => {
-      $('#makanan').append(`
+      makananContainer.append(`
         <tr class='menus'>
           <td>${food.name}</td>
         </tr>
@@ -26,7 +29,7 @@ const Detail = {
     });
 
     cafe.menus.drinks.forEach((drink) => {
-      $('#minuman').append(`
+      minumanContainer.append(`
         <tr class='menus'>
           <td>${drink.name}</td>
         </tr>
