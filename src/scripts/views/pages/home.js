@@ -80,7 +80,7 @@ const Home = {
     const cafesContainer = document.querySelector('#cafes');
     const hero = document.querySelector('.hero');
 
-    hero.css('background-image', `linear-gradient(0deg, rgba(255, 249, 234, 0.7), rgba(255, 249, 234, 1)), url(${heroBackground})`);
+    hero.style.backgroundImage = `linear-gradient(0deg, rgba(255, 249, 234, 0.7), rgba(255, 249, 234, 1)), url(${heroBackground})`;
 
     cafes.forEach((cafe) => {
       cafesContainer.innerHTML += createCafeItemTemplate(cafe);

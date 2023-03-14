@@ -18,7 +18,7 @@ const Detail = {
     const minumanContainer = document.querySelector('#minumanContainer');
 
     mainContent.innerHTML = createCafeDetailTemplate(cafe);
-    hero.css('background-image', `linear-gradient(0deg, rgba(255, 249, 234, 0.7), rgba(255, 249, 234, 1)), url(${`${CONFIG.BASE_IMAGE_URL}large/${cafe.pictureId}`})`);
+    hero.style.backgroundImage = `linear-gradient(0deg, rgba(255, 249, 234, 0.7), rgba(255, 249, 234, 1)), url(${`${CONFIG.BASE_IMAGE_URL}large/${cafe.pictureId}`})`;
 
     cafe.menus.foods.forEach((food) => {
       makananContainer.append(`
