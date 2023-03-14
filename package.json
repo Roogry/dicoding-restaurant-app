@@ -7,6 +7,7 @@
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "serve": "http-server dist",
+    "build-image": "node src/scripts/utils/sharp.js",
     "test": "karma start"
   },
   "keywords": [],
@@ -24,6 +25,9 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "http-server": "^14.1.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webpack-plugin": "^2.4.2",
     "jasmine-ajax": "^4.0.0",
     "jasmine-core": "^4.2.0",
     "jquery": "^3.6.3",
@@ -33,6 +37,7 @@
     "karma-jasmine": "^4.0.2",
     "karma-sourcemap-loader": "^0.3.8",
     "karma-webpack": "^5.0.0",
+    "sharp": "^0.31.3",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
@@ -43,6 +48,7 @@
   },
   "dependencies": {
     "idb": "^7.1.1",
+    "lazysizes": "^5.3.2",
     "regenerator-runtime": "^0.13.9",
     "workbox-window": "^6.5.4"
   }

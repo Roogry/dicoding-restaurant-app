@@ -1,7 +1,4 @@
 import heroBackground from '../../../public/images/heros/hero-image_2.jpg';
-import cleanIllustration from '../../../public/images/strengths/cleaning.png';
-import chargeIllustration from '../../../public/images/strengths/charge.png';
-import cheapIllustration from '../../../public/images/strengths/cheap.png';
 import RestaurantApiSource from '../../data/restaurant-api-source';
 import { createCafeItemTemplate } from '../templates/template-creator';
 
@@ -24,8 +21,10 @@ const Home = {
         </div>
         <div class="strength">
           <article id="strength-clean" class="strength-item">
-              <img class="strength-item__thumbnail"
-                  src="" alt="">
+              <picture>
+                <source media="(max-width: 600px)" srcset="./images/strengths/cleaning-small.png">
+                <img class="lazyload strength-item__thumbnail" data-src="./images/strengths/cleaning-large.png" alt="">
+              </picture>
               <div class="strength-item__content">
                   <h3 class="strength-item__title">
                     Bersih dan Nyaman
@@ -36,8 +35,10 @@ const Home = {
               </div>
           </article>
           <article id="strength-charge" class="strength-item">
-              <img class="strength-item__thumbnail"
-                  src="" alt="">
+              <picture>
+                <source media="(max-width: 600px)" srcset="./images/strengths/charge-small.png">
+                <img class="lazyload strength-item__thumbnail" data-src="./images/strengths/charge-large.png" alt="">
+              </picture>
               <div class="strength-item__content">
                   <h3 class="strength-item__title">
                     Tersedia Stop Kontak
@@ -48,8 +49,10 @@ const Home = {
               </div>
           </article>
           <article id="strength-cheap" class="strength-item">
-              <img class="strength-item__thumbnail"
-                  src="" alt="">
+              <picture>
+                <source media="(max-width: 600px)" srcset="./images/strengths/cheap-small.png">
+                <img class="lazyload strength-item__thumbnail" data-src="./images/strengths/cheap-large.png" alt="">
+              </picture>
               <div class="strength-item__content">
                   <h3 class="strength-item__title">
                     Budget Anak Kos
@@ -74,9 +77,6 @@ const Home = {
 
   async afterRender() {
     $('.hero').css('background-image', `linear-gradient(0deg, rgba(255, 249, 234, 0.7), rgba(255, 249, 234, 1)), url(${heroBackground})`);
-    $('#strength-clean .strength-item__thumbnail').attr('src', cleanIllustration);
-    $('#strength-charge .strength-item__thumbnail').attr('src', chargeIllustration);
-    $('#strength-cheap .strength-item__thumbnail').attr('src', cheapIllustration);
 
     const cafes = await RestaurantApiSource.allCafes();
     const cafesContainer = document.querySelector('#cafes');

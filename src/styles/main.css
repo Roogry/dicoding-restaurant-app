@@ -119,6 +119,7 @@ main {
   background-position: center;
   background-size: cover;
   background-color: rgb(238, 222, 181);
+  
   /* background-blend-mode: soft-light; */
 }
 
@@ -190,7 +191,7 @@ main {
 .section__highlight {
   text-align: center;
   font-size: 16px;
-  color: #FFCC45;
+  color: #a5842b;
   margin-bottom: 8px;
   letter-spacing: 1.2px;
 }
@@ -315,7 +316,7 @@ main {
 
 .cafe-item__info {
   font-size: 12px;
-  color: #ffc400;
+  color: #a5842b;
 }
 
 .cafe-item__title {

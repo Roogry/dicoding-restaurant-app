@@ -9,7 +9,7 @@ class AppBar extends HTMLElement {
     <header class="header">
         <h1 class="header__title"><a href="/">Cafe Market</a></h1>
         <div class="header__inner">
-          <button id="hamburgerButton">
+          <button id="hamburgerButton" aria-label="sidebar menu">
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>

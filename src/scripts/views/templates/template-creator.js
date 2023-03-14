@@ -4,7 +4,10 @@ import TextHelper from '../../utils/text-helper';
 const createCafeDetailTemplate = (cafe) => `
   <section class="hero">
     <div class="hero__inner hero__image__container">
-      <img class="hero__inner_image" src="${`${CONFIG.BASE_IMAGE_URL}large/${cafe.pictureId}`}" alt="${cafe.name}" />
+      <picture>
+        <source media="(max-width: 600px)" srcset="${`${CONFIG.BASE_IMAGE_URL}small/${cafe.pictureId}`}">
+        <img class="lazyload hero__inner_image" data-src="${`${CONFIG.BASE_IMAGE_URL}large/${cafe.pictureId}`}" alt="${cafe.name}">
+      </picture>
       <div class="hero__inner__right">
         <p class="hero__info">Rating ${cafe.rating}</p>
         <h1 class="hero__title">${cafe.name} <span class="hero__highlight">(${cafe.city})</span></h1>
@@ -66,8 +69,9 @@ const createCafeDetailTemplate = (cafe) => `
 const createCafeItemTemplate = (cafe) => `
   <article class="cafe-item" tabindex="0">
     <div class="cafe-item__header">
-      <img class="cafe-item__thumbnail" alt="${cafe.name}"
-           src="${cafe.pictureId ? `${CONFIG.BASE_IMAGE_URL}small/${cafe.pictureId}` : 'https://picsum.photos/id/666/800/450?grayscale'}">
+      <picture>
+        <img class="lazyload cafe-item__thumbnail" data-src="${cafe.pictureId ? `${CONFIG.BASE_IMAGE_URL}small/${cafe.pictureId}` : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="">
+      </picture>
       <div class="cafe-item__location">
         <p class="cafe-item__city">${cafe.city}</p>
       </div>
