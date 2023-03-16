@@ -12,8 +12,6 @@ const createCafeDetailTemplate = (cafe) => `
         <p class="hero__info">Rating ${cafe.rating}</p>
         <h1 class="hero__title">${cafe.name} <span class="hero__highlight">(${cafe.city})</span></h1>
         <p class="hero__tagline">${cafe.address}</p>
-
-        <div id="likeButtonContainer"></div>
       </div>
     </div>
   </section>
@@ -39,7 +37,6 @@ const createCafeDetailTemplate = (cafe) => `
             </tr>
           </thead>
           <tbody id='makanan'>
-
           </tbody>
         </table>
       </div>
@@ -64,6 +61,7 @@ const createCafeDetailTemplate = (cafe) => `
     </div>
     <div id="reviews" class="reviews" tabindex="0"></div>
   </section>
+  <div id="likeButtonContainer"></div>
 `;
 
 const createCafeItemTemplate = (cafe) => `
@@ -81,7 +79,7 @@ const createCafeItemTemplate = (cafe) => `
           Rating ${cafe.rating}
       </p>
       <h3 class="cafe-item__title">
-          <a href="/#/detail/${cafe.id}">${cafe.name}</a>
+          <a class="cafe__title" href="/#/detail/${cafe.id}">${cafe.name}</a>
       </h3>
       <p class="cafe-item__description">
           ${TextHelper.truncate(cafe.description, 100)}

@@ -1,4 +1,5 @@
 const { merge } = require('webpack-merge');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -20,4 +21,21 @@ module.exports = merge(common, {
       },
     ],
   },
+  plugins: [
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: './sw.bundle.js',
+      clientsClaim: true,
+      skipWaiting: true,
+      runtimeCaching: [{
+        urlPattern: new RegExp('https://restaurant-api.dicoding.dev'),
+        handler: 'NetworkFirst',
+        options: {
+          cacheName: 'markup',
+          expiration: {
+            maxAgeSeconds: 60 * 60 * 24 * 7,
+          },
+        },
+      }],
+    }),
+  ],
 });

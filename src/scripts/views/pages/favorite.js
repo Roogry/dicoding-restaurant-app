@@ -31,9 +31,15 @@ const Favorite = {
 
     hero.style.backgroundImage = `linear-gradient(0deg, rgba(255, 249, 234, 0.7), rgba(255, 249, 234, 1)), url(${heroBackground})`;
 
-    cafes.forEach((cafe) => {
-      cafesContainer.innerHTML += createCafeItemTemplate(cafe);
-    });
+    if (cafes.length > 0) {
+      cafes.forEach((cafe) => {
+        cafesContainer.innerHTML += createCafeItemTemplate(cafe);
+      });
+    } else {
+      cafesContainer.innerHTML = `<p id="cafe-item__not__found">
+        Tidak ada cafe untuk ditampilkan
+      </p>`;
+    }
   },
 };
 
