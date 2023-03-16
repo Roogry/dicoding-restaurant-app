@@ -3,6 +3,7 @@ import UrlParser from '../../routes/url-parser';
 import RestaurantApiSource from '../../data/restaurant-api-source';
 import { createCafeDetailTemplate, createReviewItemTemplate } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
+import FavoriteCafeIdb from '../../data/favorite-cafe-idb';
 
 const Detail = {
   async render() {
@@ -43,6 +44,7 @@ const Detail = {
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      favoriteCafes: FavoriteCafeIdb,
       cafe: {
         id: cafe.id,
         name: cafe.name,
