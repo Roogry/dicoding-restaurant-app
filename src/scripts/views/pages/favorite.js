@@ -1,4 +1,3 @@
-import heroBackground from '../../../public/images/heros/hero-image_1.jpg';
 import FavoriteCafeIdb from '../../data/favorite-cafe-idb';
 import { createCafeItemTemplate } from '../templates/template-creator';
 
@@ -6,6 +5,12 @@ const Favorite = {
   async render() {
     return `
       <section class="hero">
+        <div class="hero__background__container">
+          <picture>
+            <source media="(max-width: 600px)" srcset="./images/heros/hero-image_1-small.jpg">
+            <img class="lazyload hero__background" data-src="./images/heros/hero-image_1-large.jpg" alt="">
+          </picture>
+        </div>
         <div class="hero__inner">
           <h1 class="hero__title">Beri Keluarga Anda <br>Rasa Enak & <span class="hero__highlight">Nyaman</span></h1>
           <p class="hero__tagline">
@@ -27,9 +32,6 @@ const Favorite = {
   async afterRender() {
     const cafes = await FavoriteCafeIdb.getAllCafes();
     const cafesContainer = document.querySelector('#cafes');
-    const hero = document.querySelector('.hero');
-
-    hero.style.backgroundImage = `linear-gradient(0deg, rgba(255, 249, 234, 0.7), rgba(255, 249, 234, 1)), url(${heroBackground})`;
 
     if (cafes.length > 0) {
       cafes.forEach((cafe) => {
